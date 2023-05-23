@@ -1,0 +1,13 @@
+<body>
+    <script>
+        function criptografiaCesar(texto,troca){
+            return texto.toUpperCase().replace(/[^A-Z]/g, '').replace(/./g, function (a) {
+                return String.fromCharCode(65 + (a.charCodeAt(0) - 65 + troca) % 26);
+            });
+        }
+        var msg = 'Sou um estudante do Tecnico em Informatica';
+        console.log(criptografiaCesar(msg,0))
+
+        
+    </script>
+</body>
